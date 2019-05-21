@@ -6,16 +6,16 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:32:08 by mmasima           #+#    #+#             */
-/*   Updated: 2019/05/20 11:35:18 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/05/21 15:10:37 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int x;
 
 	x = 0;
-	while(src[x] != '\0')
+	while (src[x] != '\0')
 	{
 		dest[x] = src[x];
 		x++;
