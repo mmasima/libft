@@ -6,27 +6,18 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:32:59 by mmasima           #+#    #+#             */
-/*   Updated: 2019/05/21 17:02:41 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/05/22 10:18:59 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
 int	ft_strcmp(char *s1, char *s2)
 {
-	while (*s2 != '\0' &&*s1 != '\0' && *s2 == *s1)
+	int x;
+
+	x = 0;
+	while (s2[x] != '\0' && s1[x] != '\0' && s2[x] == s1[x])
 	{
-		++*s1;
-		++*s2;
+		x++;
 	}
-	return (*s1 - *s2);
+	return (s1[x] - s2[x]);
 }
-int main()
-{
-	char str[] = "hello";
-	char str1[] = "hello";
-	
-	ft_putchar(ft_strcmp(str, str1));
-	return (0);
-}
-	
