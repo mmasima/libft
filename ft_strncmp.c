@@ -6,7 +6,7 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:17:40 by mmasima           #+#    #+#             */
-/*   Updated: 2019/05/22 13:21:27 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/05/22 13:56:36 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	unsigned int x;
 
 	x = 0;
-	if(n == 0)
+	if (n == 0)
 	{
 		return (0);
 	}
