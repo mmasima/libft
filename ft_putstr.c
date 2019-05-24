@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 09:40:00 by mmasima           #+#    #+#             */
-/*   Updated: 2019/05/23 09:49:48 by mmasima          ###   ########.fr       */
+/*   Created: 2019/05/24 09:16:32 by mmasima           #+#    #+#             */
+/*   Updated: 2019/05/24 09:28:46 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+void	ft_putchar(char c);
+
+void	ft_putstr(char const *s)
 {
-	if (c >= 'A' && c <= 'Z')
+	int x;
+
+	while (s[x] != '\0')
 	{
-		return (c + 32);
+		ft_putchar(s[x]);
+		x++;
 	}
-	else
-		return (c);
 }
