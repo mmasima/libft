@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 09:16:32 by mmasima           #+#    #+#             */
-/*   Updated: 2019/05/25 15:39:55 by mmasima          ###   ########.fr       */
+/*   Created: 2019/05/27 14:31:31 by mmasima           #+#    #+#             */
+/*   Updated: 2019/05/27 15:38:04 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char const *s)
+void	ft_bzero(void *s, size_t n)
 {
-	int x;
+	char	*ptr;
+	size_t	x;
 
+	if (!n)
+		return ;
+	ptr = s;
 	x = 0;
-	while (s[x] != '\0')
-	{
-		ft_putchar(s[x]);
-		x++;
-	}
+	while (x < n)
+		*(ptr + x++) = 0;
 }
