@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 11:32:08 by mmasima           #+#    #+#             */
-/*   Updated: 2019/05/30 11:12:48 by mmasima          ###   ########.fr       */
+/*   Created: 2019/05/28 09:29:31 by mmasima           #+#    #+#             */
+/*   Updated: 2019/05/30 11:12:52 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strcpy(char *dest, char *src)
-{
-	int x;
+int	ft_strcmp(char const *s1, char const *s2);
 
-	x = 0;
-	while (src[x] != '\0')
-	{
-		dest[x] = src[x];
-		x++;
-	}
-	dest[x] = '\0';
-	return (dest);
+int	ft_strequ(char const *s1, char const *s2)
+{
+	if (s1 && s2)
+		if (!ft_strcmp(s1, s2))
+			return (1);
+	return (0);
 }

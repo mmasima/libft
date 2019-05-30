@@ -6,11 +6,13 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:32:59 by mmasima           #+#    #+#             */
-/*   Updated: 2019/05/22 10:18:59 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/05/30 11:14:00 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+#include <libft.h>
+
+int	ft_strcmp(char const *s1, char const *s2)
 {
 	int x;
 
