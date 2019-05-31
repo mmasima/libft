@@ -1,27 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 11:32:08 by mmasima           #+#    #+#             */
-/*   Updated: 2019/05/31 11:55:08 by mmasima          ###   ########.fr       */
+/*   Created: 2019/05/31 12:20:43 by mmasima           #+#    #+#             */
+/*   Updated: 2019/05/31 12:56:27 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int x;
+	int y;
 
+	y = 0;
 	x = 0;
-	while (src[x] != '\0')
+	while (s1[x] != '\0')
+			 x++;
+	while(s2[y] != '\0')
 	{
-		dest[x] = src[x];
-		x++;
+		s1[x] = s2[y];
+		y++;
 	}
-	dest[x] = '\0';
-	return (dest);
+	s1[x] = '\0';
+	return (s1);
+}
+int main()
+{
+   char str1[] = "This is ";
+   char	str2[] = "programiz.com";
+
+	ft_strcat(str1,str2);
+
+    printf("%s\n",str1);    
+    printf("%s\n",str2);
+    return (0);
 }

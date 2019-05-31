@@ -6,18 +6,22 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 14:01:40 by mmasima           #+#    #+#             */
-/*   Updated: 2019/05/30 14:48:21 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/05/30 15:40:09 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include "libft.h"
+
+
+
+
 
 int main()
 {
     // Take any two strings
     char s1[] = "GeeksforGeeks";
     char s2[] = "for";
-    char* p;
+    char *p;
 
     // Find first occurence of s2 in s1
     p = strstr(s1, s2);

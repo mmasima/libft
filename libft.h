@@ -10,3 +10,4 @@ char		*ft_strchr(const char *s, int c);
 char		*ft_strcpy(char *dest, char *src);
 int			ft_strequ(char const* s1, char const *s2);
 
+#endif
