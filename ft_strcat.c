@@ -6,7 +6,7 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 12:20:43 by mmasima           #+#    #+#             */
-/*   Updated: 2019/05/31 12:56:27 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/05/31 13:06:49 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,9 @@ char	*ft_strcat(char *s1, const char *s2)
 	while(s2[y] != '\0')
 	{
 		s1[x] = s2[y];
+		x++;
 		y++;
 	}
 	s1[x] = '\0';
 	return (s1);
-}
-int main()
-{
-   char str1[] = "This is ";
-   char	str2[] = "programiz.com";
-
-	ft_strcat(str1,str2);
-
-    printf("%s\n",str1);    
-    printf("%s\n",str2);
-    return (0);
 }
