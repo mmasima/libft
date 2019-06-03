@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 12:22:43 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/03 16:07:05 by mmasima          ###   ########.fr       */
+/*   Created: 2019/06/03 16:45:04 by mmasima           #+#    #+#             */
+/*   Updated: 2019/06/03 17:40:57 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *b, int c, size_t len)
-{
-	size_t	x;
-	char	*ptr;
+#include "libft.h"
 
-	ptr = b;
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	int x;
+	unsigned char *ptr1;
+	unsigned char *ptr2;
+
+	ptr1 = (unsigned char *)dst;
+	ptr2 = (unsigned char *)src;
 	x = 0;
-	while (x < len)
-		*(ptr + x++) = c;
-	return (b);
+	if (dst > src)
+	{
+		while (len--)
+			ptr1 = ptr2;
+	}
+	else
+	{
+			while(x < len)
+			{
+				ptr1[x] = ptr2[x];
+				x++;
+			}
+	}
+	return (dst);
 }
