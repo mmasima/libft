@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 09:40:00 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/05 13:48:52 by mmasima          ###   ########.fr       */
+/*   Created: 2019/06/05 11:02:17 by mmasima           #+#    #+#             */
+/*   Updated: 2019/06/05 13:22:31 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+int		ft_atoi(const char *str)
 {
-	if (c >= 'A' && c <= 'Z')
+	int x;
+	int num;
+
+	num = 1;
+	x = 0;
+	while ((*str >= '\t' && *str <= '\r') || *str == 32 || *str == 0)
 	{
-		return (c + 32);
+		str++;
 	}
-	else
-		return (c);
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			num = -1;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		x = x * 10 + (*str - 48);
+		str++;
+	}
+	return (x * num);
 }

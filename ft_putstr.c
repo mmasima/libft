@@ -6,11 +6,11 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:16:32 by mmasima           #+#    #+#             */
-/*   Updated: 2019/05/25 15:39:55 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/05 13:39:20 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include "libft.h"
 
 void	ft_putstr(char const *s)
 {
