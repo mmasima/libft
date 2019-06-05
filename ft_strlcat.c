@@ -6,13 +6,13 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 15:35:47 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/05 14:04:31 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/05 15:02:15 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int x;
 	unsigned int y;

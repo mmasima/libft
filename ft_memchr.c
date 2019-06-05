@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mmasima <mmasima@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/31 15:11:07 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/05 14:57:34 by mmasima          ###   ########.fr       */
+/*   Created: 2019/06/05 15:39:01 by mmasima           #+#    #+#             */
+/*   Updated: 2019/06/05 16:36:49 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	size_t x;
+	unsigned char *s;
 
-	x = 0;
-	while (src != '\0' && x < len)
+	s = (unsigned char *)str;
+	while (n--)
 	{
-		dst[x] = src[x];
-		x++;
+		if (*s != (unsigned char)c)
+			s++;
+		else
+			return (s);
 	}
-	return (dst);
+	return (0);
 }

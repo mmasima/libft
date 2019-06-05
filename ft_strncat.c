@@ -6,16 +6,16 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 13:11:39 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/05 14:05:17 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/05 15:01:29 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, char *s2, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int x;
-	int y;
+	size_t x;
+	size_t y;
 
 	x = 0;
 	y = 0;
@@ -28,5 +28,5 @@ char	*ft_strncat(char *s1, char *s2, size_t n)
 		y++;
 	}
 	s1[x] = '\0';
-	return (*s1);
+	return (s1);
 }
