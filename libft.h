@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/07 16:20:59 by mmasima           #+#    #+#             */
+/*   Updated: 2019/06/07 16:21:42 by mmasima          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
-#define LIBFT_H
-#include <strings.h>
-#include <unistd.h>
-#include <stdlib.h>
+# define LIBFT_H
+# include <strings.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 int				ft_atoi(const char *s);
 void			ft_bzero(void *s, size_t n);
