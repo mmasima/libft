@@ -6,7 +6,7 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 16:24:16 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/05 14:15:17 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/18 11:19:12 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	ptr1 = (unsigned char *)dst;
 	ptr2 = (unsigned char *)src;
 	x = 0;
+	if (ptr1 == ptr2)
+		return (ptr2);
 	while (x < n)
 	{
 		ptr1[x] = ptr2[x];

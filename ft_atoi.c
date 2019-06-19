@@ -6,33 +6,42 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 11:02:17 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/05 13:22:31 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/18 15:11:54 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+static int		exceeds_n(int n)
 {
-	int x;
-	int num;
+	if (n == -1)
+		return (0);
+	return (-1);
+}
 
-	num = 1;
-	x = 0;
-	while ((*str >= '\t' && *str <= '\r') || *str == 32 || *str == 0)
-	{
+int				ft_atoi(const char *str)
+{
+	int			x;
+	int			lim;
+	int			n;
+
+	n = 1;
+	while ((*str >= '\t' && *str <= '\r') || *str == 32 || *str == '0')
 		str++;
-	}
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-			num = -1;
+			n = -1;
 		str++;
 	}
-	while (*str >= '0' && *str <= '9')
+	lim = 0;
+	x = 0;
+	while (*str >= '0' && *str <= '9' && *str)
 	{
-		x = x * 10 + (*str - 48);
-		str++;
+		x = (x * 10) + (*str++ - '0');
+		if (lim >= 19)
+			return (exceeds_n(n));
+		lim++;
 	}
-	return (x * num);
+	return (x * n);
 }
