@@ -6,7 +6,7 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:45:24 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/19 09:35:59 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/19 13:54:02 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	char *str;
-
-	str = (char*)malloc(size);
-	if (str == NULL)
-		return (NULL);
-	ft_memset(str, (int)'\0', size + 1);
-	return (str);
+	return ((char *)ft_memalloc(size + 1));
 }

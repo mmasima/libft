@@ -6,7 +6,7 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:16:32 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/05 13:39:20 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/19 14:41:39 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr(char const *s)
 	int x;
 
 	x = 0;
+	if (!s)
+		return ;
 	while (s[x] != '\0')
 	{
 		ft_putchar(s[x]);

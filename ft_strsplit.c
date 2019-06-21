@@ -6,7 +6,7 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 10:59:08 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/17 15:28:35 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/19 16:17:53 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static int			ft_cntwrd(char const *s, char c)
 
 	i = 0;
 	counter = 0;
+	if (!s)
+		return (0);
 	while (s[i])
 	{
 		while (s[i] == c)
@@ -35,6 +37,8 @@ static char			*ft_strndup(const char *s, size_t n)
 {
 	char	*str;
 
+	if (!s)
+		return (0);
 	str = (char *)malloc(sizeof(char) * n + 1);
 	if (str == NULL)
 		return (NULL);
@@ -52,8 +56,9 @@ char				**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	k = 0;
-	tab = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c)) + 1);
-	if (tab == NULL)
+	if (!s)
+		return (0);
+	if (!(tab = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c)) + 1)))
 		return (NULL);
 	while (s[i])
 	{
@@ -64,8 +69,7 @@ char				**ft_strsplit(char const *s, char c)
 			i++;
 		if (i > j)
 		{
-			tab[k] = ft_strndup(s + j, i - j);
-			k++;
+			tab[k++] = ft_strndup(s + j, i - j);
 		}
 	}
 	tab[k] = NULL;
