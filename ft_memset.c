@@ -6,7 +6,7 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:22:43 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/05 14:15:02 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/24 09:56:43 by mmasima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ void	*ft_memset(void *b, int c, size_t len)
 	ptr = b;
 	x = 0;
 	while (x < len)
-		*(ptr + x++) = c;
+	{
+		ptr[x] = c;
+		x++;
+	}
 	return (b);
 }
