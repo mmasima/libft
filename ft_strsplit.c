@@ -6,7 +6,7 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 10:59:08 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/19 16:17:53 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/26 17:29:32 by obie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static char			*ft_strndup(const char *s, size_t n)
 	return (str);
 }
 
-char				**ft_strsplit(char const *s, char c)
+char				**ft_strsplit(const char *s, char c)
 {
 	int				i;
 	int				j;
