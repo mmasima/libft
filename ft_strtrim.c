@@ -6,13 +6,13 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 10:15:27 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/20 14:51:29 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/26 17:24:11 by obie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char	*ft_strtrim(const char *s)
 {
 	size_t		start;
 	size_t		len;

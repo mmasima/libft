@@ -6,13 +6,13 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 09:29:31 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/19 14:27:46 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/26 17:06:49 by obie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+int	ft_strequ(const char *s1, const char *s2)
 {
 	if (s1 && s2)
 		if (!ft_strcmp(s1, s2))

@@ -6,13 +6,13 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 15:27:58 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/19 14:15:25 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/26 17:07:15 by obie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	*ft_strmap(const char *s, char (*f)(char))
 {
 	unsigned int	x;
 	char			*str;
