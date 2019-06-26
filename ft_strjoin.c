@@ -6,13 +6,13 @@
 /*   By: mmasima <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 10:37:48 by mmasima           #+#    #+#             */
-/*   Updated: 2019/06/19 14:33:42 by mmasima          ###   ########.fr       */
+/*   Updated: 2019/06/26 18:01:11 by obie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
 	int		x;
 	int		y;
