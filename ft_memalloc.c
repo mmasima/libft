@@ -14,11 +14,11 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void *mem;
+	void	*mem;
 
-	mem = malloc(size);
-	if (malloc(size) == NULL)
+	mem = (unsigned char *)malloc(size);
+	if (mem == NULL)
 		return (NULL);
-	mem = ft_memset(mem, 0, size);
+	ft_memset(mem, 0, size);
 	return (mem);
 }
