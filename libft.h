@@ -16,6 +16,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+# define IS_SPACE(x) (x == ' ' || x == '\t' || x == '\r' || x == '\f')
+
 int			ft_atoi(const char *str);
 void		ft_bzero(void *s, size_t n);
 int			ft_isalnum(int c);
@@ -37,7 +39,7 @@ void		ft_putchar_fd(char c, int fd);
 void		ft_putendl(const char*s);
 void		ft_putendl_fd(const char *s, int fd);
 void		ft_putnbr(int n);
-void		ft_swap(int *a, int *b)
+void		ft_swap(int *a, int *b);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putstr(const char *s);
 void		ft_putstr_fd(const char *s, int fd);
@@ -69,4 +71,9 @@ char		*ft_strsub(const char*s, unsigned int start, size_t len);
 char		*ft_strtrim(const char *s);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
+int		    ft_cntallwords(char const *str);
+char		**ft_splitall(char const *s);
+void	    *ft_realloc(void *ptr, size_t prev_size, size_t new_size);
+char	    *ft_strjoinch(char const *s1, char c);
+
 #endif
