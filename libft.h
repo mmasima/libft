@@ -75,5 +75,8 @@ int		    ft_cntallwords(char const *str);
 char		**ft_splitall(char const *s);
 void	    *ft_realloc(void *ptr, size_t prev_size, size_t new_size);
 char	    *ft_strjoinch(char const *s1, char c);
+char		*ft_strjoincl(char *s1, char *s2);
+char		*ft_strjoinchf(char *str, char c);
+char	    *ft_pathjoin(char *s1, char *s2);
 
 #endif

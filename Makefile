@@ -69,6 +69,9 @@ FILES	= ft_isalnum.c\
 		ft_cnt_all_words.c\
 		ft_realloc.c\
 		ft_strjoinch.c\
+		ft_strjoincl.c\
+		ft_strjoinchf.c\
+		ft_pathjoin.c\
 
 OBJECT = $(FILES:%.c=%.o)
 
